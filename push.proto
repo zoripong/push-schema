@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package rpc;
+option go_package="./rpc";
+
+message PushInstantlyRequest {
+  string content = 1;
+  string sender_name = 2;
+  int64 receiver_id = 3;
+  int64 send_at = 4;
+}
+
+message PushInstantlyResponse {
+  bool success = 1;
+}
+
+service PushService {
+    rpc PushInstantly(PushInstantlyRequest) returns (PushInstantlyResponse) {}
+}
+
