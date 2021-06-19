@@ -16,3 +16,7 @@ python -m grpc_tools.protoc -I=$SRC_DIR --python_out=$DST_DIR --grpc_python_out=
 zoripong/workspace  > cd $WORKSPACE
 zoripong/workspace  > protoc --go_out=plugins=grpc:./go/src/github.com/zoripong/simple-chat-service -I=./push-schema ./push-schema/push.proto
 ```
+
+## related repository
+- python push service: https://github.com/zoripong/simple-push-service
+- go push client: https://github.com/zoripong/simple-chat-service
