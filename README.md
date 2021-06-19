@@ -13,6 +13,6 @@ python -m grpc_tools.protoc -I=$SRC_DIR --python_out=$DST_DIR --grpc_python_out=
 ## generate go stub
 
 ```
-zoripong/workspace  > cd $GOPATH
-workspace/src  > protoc --go_out=plugins=grpc:./simple-chat-service -I=./push-schema ./push-schema/push.proto
+zoripong/workspace  > cd $WORKSPACE
+zoripong/workspace  > protoc --go_out=plugins=grpc:./go/src/github.com/zoripong/simple-chat-service -I=./push-schema ./push-schema/push.proto
 ```
