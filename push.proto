@@ -4,10 +4,11 @@ package rpc;
 option go_package="./rpc";
 
 message PushInstantlyRequest {
+  reserved 2;
   string content = 1;
-  string sender_name = 2;
   int64 receiver_id = 3;
   int64 send_at = 4;
+  int64 sender_id = 5;
 }
 
 message PushInstantlyResponse {
